@@ -1,4 +1,8 @@
 .table {
   background-color: black;
   height: 100vh;
-  width: 50vw; }
+  width: 20vw; }
+
+p {
+  font-family: "Lato", "Open sans";
+  color: black; }
