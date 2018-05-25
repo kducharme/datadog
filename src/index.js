@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { render } from 'react-dom';
+import Table from './components/table'
 import registerServiceWorker from './registerServiceWorker';
+import './styles/css/index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+render(<Table />, document.querySelector('#main'));
 registerServiceWorker();
