@@ -73,6 +73,11 @@ h1, h2, h3, h4, h5, p, button, label {
     font-size: 13px;
     color: #898989;
     padding: 0 0 8px 12px; }
+  .filters .filters__saved {
+    font-size: 13px;
+    color: #454545;
+    height: 16px;
+    margin: 0 0 12px 12px; }
 
 .header {
   width: 100%;
