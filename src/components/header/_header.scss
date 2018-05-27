@@ -2,9 +2,8 @@
 @import '../../styles/mixins';
 
 .header {
-    // @include display-flex(flex-start, center, column);
-    width: 250px;
-    height: calc(100vh - 52px);
-    background: white;
+    width: calc(100vw - 50px - 250px - 64px);
+    height: 120px;
+    background: red;
     border-right: 1px solid $borderColor;
 }
