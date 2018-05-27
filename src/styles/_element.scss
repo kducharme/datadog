@@ -4,11 +4,12 @@
 * {
     margin: 0;
 }
+
 body { 
     width: 100vw;
     @include display-flex(center, center, row);
 }
 
-p {
+h1, h2, h3, h4, h5, p, button, label {
     font-family: $primaryFont;
 }

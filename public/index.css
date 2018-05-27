@@ -1,6 +1,6 @@
 .table {
   border: 1px solid #DDDDDD;
-  height: 650px;
+  height: 600px;
   width: calc(100vw - 50px - 250px - 64px);
   margin: 0 32px 0 32px; }
 
@@ -14,7 +14,7 @@ body {
   align-items: center;
   flex-direction: row; }
 
-p {
+h1, h2, h3, h4, h5, p, button, label {
   font-family: "Lato", "Open sans"; }
 
 .application {
@@ -24,17 +24,24 @@ p {
   flex-direction: row;
   width: 100vw; }
 
-.application__right {
+.application__content {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column; }
 
-.application__right--content {
+.application__content--row {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row; }
+  flex-direction: row;
+  width: calc(100vw - 50px); }
+
+.application__content--table {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column; }
 
 .pageNav {
   width: calc(100vw - 50px);
@@ -52,4 +59,21 @@ p {
   width: 250px;
   height: calc(100vh - 52px);
   background: white;
-  border-right: 1px solid #DDDDDD; }
+  border-right: 1px solid #DDDDDD;
+  padding: 0 16px 0 16px; }
+  .filters .filters__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #DDDDDD;
+    margin: 32px 0 16px 0;
+    height: 25px; }
+  .filters .filters__header > h2 {
+    font-size: 13px;
+    color: #898989;
+    padding: 0 0 8px 12px; }
+
+.header {
+  width: 100%;
+  height: 110px; }

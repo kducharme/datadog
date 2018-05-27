@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.filters {
+    width: 250px;
+    height: calc(100vh - 52px);
+    background: white;
+    border-right: 1px solid $borderColor;
+    padding: 0 16px 0 16px;
+
+    .filters__header {
+        @include display-flex(space-between, center, row);
+        border-bottom: 1px solid $borderColor;
+        margin: 32px 0 16px 0;
+        height: 25px;
+    }
+    
+    .filters__header > h2 {
+        font-size: 13px;
+        color: $headerColor;
+        padding: 0 0 8px 12px;
+    }
+
+    .filters__saved {
+
+    }
+}

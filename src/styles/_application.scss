@@ -6,10 +6,15 @@
     width: 100vw;
 }
 
-.application__right {
+.application__content {
     @include display-flex(flex-start, flex-start, column)
 }
 
-.application__right--content {
-    @include display-flex(flex-start, flex-start, row)
+.application__content--row {
+    @include display-flex(flex-start, flex-start, row);
+    width: calc(100vw - 50px);
+}
+
+.application__content--table {
+    @include display-flex(flex-start, flex-start, column)
 }
