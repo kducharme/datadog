@@ -1,6 +1,9 @@
 @import 'variables';
 
+* {
+    margin: 0;
+}
+
 p {
     font-family: $primaryFont;
-    color: black;
 }

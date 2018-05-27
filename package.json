@@ -15,10 +15,10 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar src/styles/scss -o src/styles/css",
-    "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss -o src/styles/css --watch --recursive"
+    "build-css": "node-sass-chokidar src/styles/index.scss -o public/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles/index.scss -o public/ --watch --recursive"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.3"
   }
-}
+ }
