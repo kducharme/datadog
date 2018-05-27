@@ -1,7 +1,12 @@
 @import 'variables';
+@import 'mixins';
 
 * {
     margin: 0;
+}
+body { 
+    width: 100vw;
+    @include display-flex(center, center, row);
 }
 
 p {

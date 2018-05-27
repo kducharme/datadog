@@ -2,5 +2,14 @@
 @import 'mixins';
 
 .application {
-    @include display-flex(center, center, column);
+    @include display-flex(flex-start, center, row);
+    width: 100vw;
+}
+
+.application__right {
+    @include display-flex(flex-start, flex-start, column)
+}
+
+.application__right--content {
+    @include display-flex(flex-start, flex-start, row)
 }
