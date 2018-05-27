@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class NavBar extends Component {
+class Navigation extends Component {
     render() {
         return (
             <nav className="mainNavigation shoNuff" id="myId">
@@ -12,4 +12,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default Navigation;
