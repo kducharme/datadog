@@ -1,6 +1,6 @@
 .table {
-  background-color: red;
-  height: 100vh;
+  border: 1px solid #DDDDDD;
+  height: 50vh;
   width: 90vw; }
 
 * {
