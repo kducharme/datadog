@@ -9,5 +9,7 @@
 p {
   font-family: "Lato", "Open sans"; }
 
-nav {
-  background-color: red; }
+.primaryNav {
+  background-color: blue;
+  width: 100%;
+  height: 20px; }

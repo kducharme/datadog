@@ -1,0 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
+.application {
+    @include display-flex(center, center, column);
+}
