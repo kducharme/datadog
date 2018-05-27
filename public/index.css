@@ -14,8 +14,8 @@ body {
   align-items: center;
   flex-direction: row; }
 
-h1, h2, h3, h4, h5, p, button, label {
-  font-family: "Lato", "Open sans"; }
+h1, h2, h3, h4, h5, p, button, label, li {
+  font-family: "Roboto", "Open sans"; }
 
 .application {
   display: flex;
@@ -67,17 +67,23 @@ h1, h2, h3, h4, h5, p, button, label {
     align-items: center;
     flex-direction: row;
     border-bottom: 1px solid #DDDDDD;
-    margin: 32px 0 16px 0;
+    margin: 32px 0 24px 0;
     height: 25px; }
   .filters .filters__header > h2 {
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 600;
     color: #898989;
     padding: 0 0 8px 12px; }
-  .filters .filters__saved {
+  .filters .filters__saved > ul {
+    padding: 0; }
+  .filters .filters__saved > ul > li {
     font-size: 13px;
     color: #454545;
-    height: 16px;
-    margin: 0 0 12px 12px; }
+    margin: 0 0 14px 14px;
+    list-style-type: none; }
+  .filters .filters__saved > ul > li:hover {
+    cursor: pointer;
+    color: #428BCA; }
 
 .header {
   width: 100%;

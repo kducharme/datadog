@@ -11,21 +11,29 @@
     .filters__header {
         @include display-flex(space-between, center, row);
         border-bottom: 1px solid $borderColor;
-        margin: 32px 0 16px 0;
+        margin: 32px 0 24px 0;
         height: 25px;
     }
     
     .filters__header > h2 {
-        font-size: 13px;
+        font-size: 14px;
+        font-weight: 600;
         color: $headerColor;
         padding: 0 0 8px 12px;
     }
-
-    .filters__saved {
+    
+    .filters__saved > ul {
+        padding: 0;
+    }
+    
+    .filters__saved > ul > li {
         font-size: 13px;
         color: $textColor;
-        height: 16px;
-        margin: 0 0 12px 12px;
-
+        margin: 0 0 14px 14px;
+        list-style-type: none;
+    }
+    .filters__saved > ul > li:hover {
+        cursor: pointer;
+        color: $primaryColor;
     }
 }

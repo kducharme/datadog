@@ -10,6 +10,6 @@ body {
     @include display-flex(center, center, row);
 }
 
-h1, h2, h3, h4, h5, p, button, label {
+h1, h2, h3, h4, h5, p, button, label, li {
     font-family: $primaryFont;
 }

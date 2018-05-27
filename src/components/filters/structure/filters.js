@@ -4,16 +4,16 @@ import Header from './header';
 
 class Filters extends React.Component {
     render() {
-     return <div className='filters'>
-     <Header />
-     <SavedFilter savedFilter='Integrations & alert status only' />
-     <SavedFilter savedFilter='Lambda migration' />
-     <SavedFilter savedFilter='Monitors without data' />
-     <SavedFilter savedFilter='Re-platforming team' />
-     <SavedFilter savedFilter='Testing & QA environment' />
-     
-     </div>
+        return (
+            <div className='filters'>
+                <div className='filters__block'>
+                    <Header title='Favorite saved filters' />
+                    <SavedFilter />
+                </div>
+
+            </div>
+        )
     }
-} 
+}
 
 export default Filters;
