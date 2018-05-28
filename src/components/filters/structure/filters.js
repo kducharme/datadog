@@ -7,8 +7,9 @@ class Filters extends React.Component {
         return (
             <div className='filters'>
                 <div className='filters__block'>
-                    <Header title='Favorite saved filters' />
+                    <Header title='Saved filters' />
                     <SavedFilter />
+                    <Header title='Filters' />
                 </div>
 
             </div>
