@@ -9,7 +9,7 @@ import Table from './components/table/table'
 import Filters from './components/filters/structure/filters'
 import PrimaryNavigation from './components/navigation/primary/primaryNav';
 import PageNavigation from './components/navigation/page/pageNav';
-import Header from './components/table/header/header';
+import Actions from './components/table/actions/actions';
 
 ReactDOM.render(
     <Router>
@@ -20,7 +20,7 @@ ReactDOM.render(
                 <div className='application__content--row'>
                     <Filters />
                     <div className='application__content--table'>
-                        <Header />
+                        <Actions />
                         <Table />
                     </div>
                 </div>
