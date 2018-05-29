@@ -7,6 +7,9 @@
     background: white;
     border-right: 1px solid $borderColor;
     padding: 0 16px 0 16px;
+    overflow: scroll;
+
+    // Header for each filter section
 
     .filters__header {
         @include display-flex(space-between, center, row);
@@ -21,6 +24,8 @@
         color: $headerColor;
         padding: 0 0 8px 12px;
     }
+
+    // Saved filters section
     
     .filters__saved > ul {
         padding: 0;
@@ -36,4 +41,32 @@
         cursor: pointer;
         color: $primaryColor;
     }
+
+    // Filters section
+
+    .filtters__group {
+
+    }
+
+    .filters__group--header {
+        @include display-flex(flex-start, center, row);
+        font-size: 13px;
+        font-weight: 600;
+        color: $textColor;   
+        height: 32px;
+        background-color: $headerBg;
+        padding-left: 16px;
+        margin-bottom: 12px;
+    }
+
+    .filters__group--filter {
+        @include display-flex(flex-start, center, row);
+    }
+
+    .individualFilter > ul > li:last-child {
+        margin-bottom: 24px;
+    }
+
+    
+
 }
