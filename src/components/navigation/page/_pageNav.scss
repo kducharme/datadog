@@ -2,13 +2,24 @@
 @import '../../../styles/mixins';
 
 .pageNav {
-    @include dislay-flex(flex-start, center, row);
-    width: calc(100vw - 50px);
+    @include display-flex(flex-start, center, row);
+    width: calc(100vw - 60px);
     height: 52px;
     background: $headerBg;
     border-bottom: 1px solid $borderColor;
+    padding-left: 15px;
 
     .pageNav__link {
+        @include display-flex(center, center, row);
+        font-family: 'roboto';
+        font-size: 14px;
+        color: #898989;
         width: 95px;
+        height: 100%;
+        text-align: center;
+    }
+
+    .active {
+        background-color: #EEEEEE;
     }
 }
