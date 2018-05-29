@@ -8,7 +8,6 @@
 
 .application__content {
     @include display-flex(flex-start, flex-start, column);
-    width: calc(100vw - 50px);
 }
 
 .application__content--row {
@@ -16,6 +15,6 @@
 }
 
 .application__content--table {
-    @include display-flex(flex-start, flex-start, column)
+    @include display-flex(flex-start, flex-start, column);
     width: calc(100vw - 50px - 320px);
 }

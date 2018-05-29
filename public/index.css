@@ -28,8 +28,7 @@ h1, h2, h3, h4, h5, p, button, label, li {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
-  width: calc(100vw - 50px); }
+  flex-direction: column; }
 
 .application__content--row {
   display: flex;
@@ -75,7 +74,7 @@ h1, h2, h3, h4, h5, p, button, label, li {
   flex-direction: column;
   background: linear-gradient(#413B46, #1C1224);
   align-self: flex-start;
-  width: 50px;
+  width: 50px !important;
   height: 100vh; }
   .primaryNav .logo {
     margin: 10px 0 115px 0; }

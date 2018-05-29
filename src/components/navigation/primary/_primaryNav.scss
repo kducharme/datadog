@@ -4,7 +4,7 @@
     @include display-flex(flex-start, center, column);
     background: linear-gradient(#413B46, #1C1224);
     align-self: flex-start;
-    width: 50px;
+    width: 50px!important;
     height: 100vh;
 
     .logo {
