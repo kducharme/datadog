@@ -9,9 +9,12 @@ class FilterHeader extends React.Component {
 
     render() {
         return (
-            <h4 className='filters__group--header'>
-                {this.props.header}
-            </h4>
+            <div className='filters__group--header'>
+                <img src='img/chevron.svg'></img>
+                <h4>
+                    {this.props.header}
+                </h4>
+            </div>
         )
     }
 }
