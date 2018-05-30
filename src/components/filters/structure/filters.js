@@ -9,7 +9,7 @@ class Filters extends React.Component {
         return (
             <div className='filters'>
                 <div className='filters__block'>
-                    <Header title='Saved filters' />
+                    <Header title='Saved views' />
                     <SavedFilter />
                 </div>
                 <div className='filters__block'>

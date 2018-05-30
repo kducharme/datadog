@@ -1,13 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import PageRouter from '../../../router'
+import { Link } from "react-router-dom";
 
 class PageNavigation extends React.Component {
+
     render() {
         return (
             <div className='pageNav'>
-                <span className='pageNav__link active'>Monitors</span>
-                <span className='pageNav__link'>Downtime</span>
-
+                <div className="pageNav__links">
+                <Link className='pageNav__link active'to="/">Monitors</Link>
+                <Link className='pageNav__link'to="/downtime">Downtime</Link>
+                </div>
+                <div className="pageNav__add">
+                </div>
             </div>
         )
     }

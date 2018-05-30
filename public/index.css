@@ -28,7 +28,8 @@ h1, h2, h3, h4, h5, p, button, label, li {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column; }
+  flex-direction: column;
+  top: 0; }
 
 .application__content--row {
   display: flex;
@@ -52,7 +53,8 @@ h1, h2, h3, h4, h5, p, button, label, li {
   height: 52px;
   background: #F8F8F8;
   border-bottom: 1px solid #DDDDDD;
-  padding-left: 15px; }
+  padding-left: 15px;
+  top: 0; }
   .pageNav .pageNav__link {
     display: flex;
     justify-content: center;
@@ -63,9 +65,16 @@ h1, h2, h3, h4, h5, p, button, label, li {
     color: #898989;
     width: 95px;
     height: 100%;
-    text-align: center; }
+    text-align: center;
+    text-decoration: none; }
+  .pageNav .pageNav__link:hover {
+    color: #428BCA;
+    cursor: pointer; }
   .pageNav .active {
     background-color: #EEEEEE; }
+  .pageNav .active:hover {
+    color: #898989;
+    cursor: default; }
 
 .primaryNav {
   display: flex;

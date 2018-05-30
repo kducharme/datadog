@@ -8,6 +8,7 @@
     background: $headerBg;
     border-bottom: 1px solid $borderColor;
     padding-left: 15px;
+    top: 0;
 
     .pageNav__link {
         @include display-flex(center, center, row);
@@ -17,9 +18,20 @@
         width: 95px;
         height: 100%;
         text-align: center;
+        text-decoration: none;
+    }
+
+    .pageNav__link:hover {
+        color: $primaryColor;
+        cursor: pointer;
     }
 
     .active {
         background-color: #EEEEEE;
+    }
+
+    .active:hover {
+        color: #898989;
+        cursor: default;
     }
 }

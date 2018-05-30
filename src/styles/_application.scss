@@ -8,6 +8,7 @@
 
 .application__content {
     @include display-flex(flex-start, flex-start, column);
+    top: 0;
 }
 
 .application__content--row {
