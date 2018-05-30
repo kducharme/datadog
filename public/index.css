@@ -46,35 +46,54 @@ h1, h2, h3, h4, h5, p, button, label, li {
 
 .pageNav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: calc(100vw - 60px);
+  width: calc(100vw - 50px);
   height: 52px;
   background: #F8F8F8;
-  border-bottom: 1px solid #DDDDDD;
-  padding-left: 15px;
-  top: 0; }
-  .pageNav .pageNav__link {
+  border-bottom: 1px solid #DDDDDD; }
+  .pageNav .pageNav__links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-family: 'roboto';
-    font-size: 14px;
-    color: #898989;
-    width: 95px;
-    height: 100%;
-    text-align: center;
-    text-decoration: none; }
-  .pageNav .pageNav__link:hover {
-    color: #428BCA;
-    cursor: pointer; }
-  .pageNav .active {
-    background-color: #EEEEEE; }
-  .pageNav .active:hover {
-    color: #898989;
-    cursor: default; }
+    padding-left: 15px;
+    height: 100%; }
+    .pageNav .pageNav__links .pageNav__links--link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      font-family: 'roboto';
+      font-size: 14px;
+      color: #898989;
+      width: 95px;
+      text-align: center;
+      text-decoration: none; }
+    .pageNav .pageNav__links .pageNav__links--link:hover {
+      color: #428BCA;
+      cursor: pointer; }
+    .pageNav .pageNav__links .active {
+      background-color: #EEEEEE;
+      height: 100%; }
+    .pageNav .pageNav__links .active:hover {
+      color: #898989;
+      cursor: default; }
+  .pageNav .pageNav__add {
+    padding-right: 15px; }
+    .pageNav .pageNav__add .pageNav__add--button {
+      height: 32px;
+      width: 120px;
+      background-color: #34A2D4;
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
+      letter-spacing: .3px; }
+    .pageNav .pageNav__add .pageNav__add--button:hover {
+      cursor: pointer;
+      background-color: #218dbe; }
 
 .primaryNav {
   display: flex;

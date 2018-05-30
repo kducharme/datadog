@@ -2,36 +2,60 @@
 @import '../../../styles/mixins';
 
 .pageNav {
-    @include display-flex(flex-start, center, row);
-    width: calc(100vw - 60px);
+    @include display-flex(space-between, center, row);
+    width: calc(100vw - 50px);
     height: 52px;
     background: $headerBg;
     border-bottom: 1px solid $borderColor;
-    padding-left: 15px;
-    top: 0;
-
-    .pageNav__link {
-        @include display-flex(center, center, row);
-        font-family: 'roboto';
-        font-size: 14px;
-        color: #898989;
-        width: 95px;
+    
+    .pageNav__links {
+        @include display-flex(flex-start, center, row);
+        padding-left: 15px;
         height: 100%;
-        text-align: center;
-        text-decoration: none;
+        
+        .pageNav__links--link {
+            @include display-flex(center, center, row);
+            font-family: 'roboto';
+            font-size: 14px;
+            color: #898989;
+            width: 95px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .pageNav__links--link:hover {
+            color: $primaryColor;
+            cursor: pointer;
+        }
+        
+        .active {
+            background-color: #EEEEEE;
+            height: 100%;
+        }
+        
+        .active:hover {
+            color: #898989;
+            cursor: default;
+        }
     }
+    
+    .pageNav__add {
+        padding-right: 15px;
 
-    .pageNav__link:hover {
-        color: $primaryColor;
-        cursor: pointer;
-    }
+        .pageNav__add--button {
+            height: 32px;
+            width: 120px;
+            background-color: #34A2D4;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            border: none;
+            letter-spacing: .3px;
+        }
 
-    .active {
-        background-color: #EEEEEE;
-    }
-
-    .active:hover {
-        color: #898989;
-        cursor: default;
+        .pageNav__add--button:hover {
+            cursor: pointer;
+            background-color: rgb(33, 141, 190);
+        }
     }
 }
