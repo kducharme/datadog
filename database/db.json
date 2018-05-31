@@ -18,7 +18,7 @@
     },
     {
       "id": "5b10043d1ac98afca95e27c9",
-      "status": "No Data",
+      "status": "Ok",
       "name": "ctx-pshard is running out of memory",
       "type": "Integration",
       "tags": "Google Cloud",
@@ -42,7 +42,7 @@
     },
     {
       "id": "5b10043d8c77516eb70ba96d",
-      "status": "No Data",
+      "status": "Ok",
       "name": "Lamda CPU overloaded",
       "type": "Composite",
       "tags": "Kafka",
@@ -130,7 +130,7 @@
     },
     {
       "id": "5b10043db7b2d9606a5fddc1",
-      "status": "No Data",
+      "status": "Ok",
       "name": "ctx-pshard is running out of memory",
       "type": "Outlier",
       "tags": "Memory",
@@ -138,7 +138,7 @@
     },
     {
       "id": "5b10043de8a6fee52c85f3b3",
-      "status": "No Data",
+      "status": "Ok",
       "name": "Postgres CPU high",
       "type": "APM",
       "tags": "Amazon",

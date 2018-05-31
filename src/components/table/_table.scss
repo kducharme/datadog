@@ -5,4 +5,17 @@
     height: 600px;
     width: calc(100vw - 50px - 345px);
     margin: 0 32px 0 32px;
+
+    .col {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .col1 { margin: 0 24px 0 16px; }
+    .col2 { width: 10% }
+    .col3 { width: 35%; padding-right: 16px; }
+    .col4 { width: 15% }
+    .col5 { width: 20% }
+    .col6 { width: 15%; margin-right: 16px; }
 }

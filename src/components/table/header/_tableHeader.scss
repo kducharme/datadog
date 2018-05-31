@@ -5,14 +5,13 @@
     @include display-flex(flex-start, center, row);
     height: 40px;
     border-bottom: 1px solid $borderColor;
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 12px;
     
     .header__selectAll {
-        margin: 0 32px 0 16px;
     }
     
     .header__title {
-        font-size: 14px;
-        font-weight: 500;
-        width: 25%;
     }
 }
