@@ -2,8 +2,6 @@ import React from 'react';
 
 class TableHeader extends React.Component {
 
-    // ['Status', 'Name', 'Type', 'Tags', 'Owner']
-
     render() {
         return (
             <div className='header'>

@@ -199,13 +199,32 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
     margin-top: 32px; }
   .actions .actions__search::placeholder {
     padding-left: 15px; }
-  .actions .actions__results {
-    font-size: 14px;
-    font-weight: 500;
-    margin: 24px 0 16px 0; }
-  .actions .actions__results > span {
-    color: #A3A3A3;
-    margin-left: 4px; }
+  .actions .actions__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row; }
+    .actions .actions__row .actions__results {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 24px 0 16px 0; }
+    .actions .actions__row .actions__results > span {
+      color: #A3A3A3;
+      margin-left: 4px; }
+    .actions .actions__row .actions__buttons--button {
+      align-self: flex-end;
+      padding: 6px 10px 6px 10px;
+      background-color: #F8F8F8;
+      border: 1px solid #DDDDDD;
+      border-radius: 3px;
+      color: #A3A3A3;
+      min-width: 55px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 8px; }
+    .actions .actions__row .actions__buttons--button:hover {
+      cursor: pointer;
+      background-color: #DDDDDD; }
 
 .header {
   display: flex;
