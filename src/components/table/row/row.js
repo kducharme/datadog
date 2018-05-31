@@ -26,7 +26,7 @@ class Row extends React.Component {
                     return (
                         <div className='rows__row' key={row.id}>
                             <input className='rows__row--select col col1' type='checkbox'></input>
-                            <span className='col col2'><p className='rows__row--status'>{row.status}</p></span>
+                            <span className='col col2'><p className={`rows__row--status ${row.status}`}>{row.status}</p></span>
                             <p className='rows__row--name col col3'>{row.name}</p>
                             <p className='rows__row--type col col4'>{row.type}</p>
                             <p className='rows__row--tags col col5'>{row.tags}</p>
