@@ -16,8 +16,9 @@
         font-size: 13px;
         width: calc(100% - 12px);
     }
-    .rows__row--select {
 
+    .rows__row:last-child {
+        border-bottom: none;
     }
     
     .rows__row--status {
@@ -30,21 +31,21 @@
         color: white;
     }
 
-    .Alert {
+    .alert {
         background-color: #D9534F;
     }
     
-    .OK, .Ok {
+    .ok {
         background-color: #5CB85C;
         
     }
     
-    .Warn {
+    .warn {
         background-color: #F0AD4E;
         
     }
     
-    .No {
+    .no {
         background-color: #898989;
         
     }

@@ -6,12 +6,15 @@
     margin: 0 32px 0 32px;
     
     .actions__search {
-        width: 98.5%;
+        width: 100%;
         height: 32px;
         background-color: $buttonBg;
         border: 1px solid $borderColor;
-        padding-left: 15px;
         margin-top: 32px;
+    }
+
+    .actions__search::placeholder {
+        padding-left: 15px;
     }
     
     .actions__results {

@@ -3,7 +3,7 @@
   height: 600px;
   width: calc(100vw - 50px - 345px);
   margin: 0 32px 0 32px; }
-  .table .col {
+  .table .table__col {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
@@ -192,12 +192,13 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
   width: calc(100vw - 50px - 345px);
   margin: 0 32px 0 32px; }
   .actions .actions__search {
-    width: 98.5%;
+    width: 100%;
     height: 32px;
     background-color: #FCFDFC;
     border: 1px solid #DDDDDD;
-    padding-left: 15px;
     margin-top: 32px; }
+  .actions .actions__search::placeholder {
+    padding-left: 15px; }
   .actions .actions__results {
     font-size: 14px;
     font-weight: 500;
@@ -236,6 +237,8 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
     border-right: 1px solid #DDDDDD;
     font-size: 13px;
     width: calc(100% - 12px); }
+  .rows .rows__row:last-child {
+    border-bottom: none; }
   .rows .rows__row--status {
     display: flex;
     justify-content: center;
@@ -247,11 +250,11 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
     font-weight: 600;
     border-radius: 3px;
     color: white; }
-  .rows .Alert {
+  .rows .alert {
     background-color: #D9534F; }
-  .rows .OK, .rows .Ok {
+  .rows .ok {
     background-color: #5CB85C; }
-  .rows .Warn {
+  .rows .warn {
     background-color: #F0AD4E; }
-  .rows .No {
+  .rows .no {
     background-color: #898989; }
