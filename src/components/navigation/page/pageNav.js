@@ -5,26 +5,25 @@ import AddRow from '../../../pages/addRow';
 
 class PageNavigation extends React.Component {
     
-    constructor() {
-        super();
-        this.state = {
-            active: 'Monitor'
-        }
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         active: menuItem
+    //     }
+    // }
 
-    isActive = (...value) => {
-        console.log('hi')
-        return value === this.props.active ? 'active' : ''
-    }
 
+    activePage(e) {
+        e.preventDefault;
+    }
+    
+    
     render() {
-        const activeStyle = 'active';
-
         return (
             <div className='pageNav'>
                 <div className="pageNav__links">
-                    <Link className={'pageNav__links--link'}  to="/">Monitors</Link>
-                    <Link className={'pageNav__links--link'} to="/downtime">Downtime</Link>
+                    <Link className={`pageNav__links--link ${window.location.pathname === '/' ? 'active': null }`} onClick={e => this.activePage(e)} to="/">Monitors</Link>
+                    <Link className={`pageNav__links--link ${window.location.pathname === '/downtime' ? 'active': null }`} onClick={e => this.activePage.bind(this)} to="/downtime">Downtime</Link>
                 </div>
                 <div className="pageNav__add">
                     <AddRow />
@@ -35,5 +34,3 @@ class PageNavigation extends React.Component {
 }
 
 export default PageNavigation;
-
-// ${this.state.active === navItem ? activeStyle : {}}`}
