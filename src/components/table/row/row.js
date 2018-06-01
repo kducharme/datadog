@@ -1,5 +1,4 @@
 import React from 'react';
-import TableButtons from '../actions/buttons/tableButtons';
 
 class Row extends React.Component {
 
@@ -25,9 +24,9 @@ class Row extends React.Component {
         if (e.currentTarget.checked) {
             this.setState(prevState => ({
                 selectedRows: [...prevState.selectedRows, id],
-            }))
-            e.target.parentElement.classList.toggle('rows__row--selected')
-            
+            }));
+            e.target.parentElement.classList.toggle('rows__row--selected');
+            this.props.activeTable;
         }
         if (!e.currentTarget.checked) {
             this.setState(prevState => ({
@@ -45,7 +44,13 @@ class Row extends React.Component {
                 {this.state.allRows.map(row => {
                     return (
                         <div className={'rows__row'} key={row.id} id={row.id}>
-                            <input className='rows__row--select table__col col1' type='checkbox' onClick={(e => this.selectRow(e, row.id))}></input>
+                            <input
+                                className='rows__row--select table__col col1'
+                                type='checkbox'
+                                onClick={(e => 
+                                    this.selectRow(e, row.id)
+                                )}
+                            ></input>
 
                             <span className='table__col col2'><p className={`rows__row--status ${(row.status).toLowerCase()}`}>{row.status}</p></span>
                             <p className='rows__row--name table__col col3'>{row.name}</p>

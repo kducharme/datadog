@@ -3,6 +3,7 @@ import TableHeader from './header/tableHeader';
 import Row from './row/row';
 
 class Table extends React.Component {
+
     render() {
         return (
             <div className='table'>
