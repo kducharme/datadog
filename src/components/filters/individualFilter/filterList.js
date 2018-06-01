@@ -14,7 +14,7 @@ class FilterList extends React.Component {
                                     <p>{f}</p>
                                 </span>
                                 <span className='filters__group--right'>
-                                    <p>{parseInt(Math.random() * 1000)}</p>
+                                    <p>{parseInt((Math.random() * 1000), 0)}</p>
                                 </span>
                             </li>
                         )

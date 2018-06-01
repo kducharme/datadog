@@ -1,16 +1,10 @@
 import React from 'react';
 
 class FilterHeader extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         return (
             <div className='filters__group--header'>
-                <img src='img/chevron.svg'></img>
+                <img src='img/chevron.svg' alt='chevron'></img>
                 <h4>
                     {this.props.header}
                 </h4>

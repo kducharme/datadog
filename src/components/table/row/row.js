@@ -5,7 +5,8 @@ class Row extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rows: []
+            allRows: [],
+            selectedRows: []
         }
     }
 
@@ -14,18 +15,26 @@ class Row extends React.Component {
             .then(rows => { return rows.json() })
             .then(rows => {
                 this.setState({
-                    rows: [...rows]
+                    allRows: [...rows]
                 })
             })
+    }
+
+    selectRow(id) {
+        console.log(id)
+        // this.setState(prevState => ({
+        //     selectedRows: [...prevState.selectedRows, row]
+        //   }))
     }
 
     render() {
         return (
             <div className='rows'>
-                {this.state.rows.map(row => {
+                {this.state.allRows.map(row => {
                     return (
-                        <div className='rows__row' key={row.id}>
-                            <input className='rows__row--select table__col col1' type='checkbox'></input>
+                        <div className='rows__row' key={row.id} id={row.id}>
+                            <input className='rows__row--select table__col col1' type='checkbox' onClick={(e => this.selectRow(row.id))} checked={this.selected}></input>
+
                             <span className='table__col col2'><p className={`rows__row--status ${(row.status).toLowerCase()}`}>{row.status}</p></span>
                             <p className='rows__row--name table__col col3'>{row.name}</p>
                             <p className='rows__row--type table__col col4'>{row.type}</p>
