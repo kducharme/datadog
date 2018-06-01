@@ -46,5 +46,14 @@
             cursor: pointer;
             background-color: $borderColor;
         }
+
+        .disabled__button {
+            opacity: .4;
+        }
+
+        .disabled__button:hover {
+            background-color: $headerBg;
+            cursor: default;
+        }
     }
 }

@@ -76,7 +76,7 @@ class PageNavigation extends React.Component {
     render() {
         return (
             <div className='pageNav'>
-                <button onCLick={this.openModal}>Click me</button>
+                <button onClick={this.openModal}>Click me</button>
             </div>
         )
     }

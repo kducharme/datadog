@@ -228,6 +228,11 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
     .actions .actions__row .actions__buttons--button:hover {
       cursor: pointer;
       background-color: #DDDDDD; }
+    .actions .actions__row .disabled__button {
+      opacity: .4; }
+    .actions .actions__row .disabled__button:hover {
+      background-color: #F8F8F8;
+      cursor: default; }
 
 .header {
   display: flex;
