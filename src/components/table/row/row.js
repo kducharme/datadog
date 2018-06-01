@@ -1,12 +1,13 @@
 import React from 'react';
+import TableProvider from '../tableContext';
+
 
 class Row extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            allRows: [],
-            selectedRows: []
+            allRows: []
         }
     }
 
@@ -31,11 +32,12 @@ class Row extends React.Component {
         if (!e.currentTarget.checked) {
             this.setState(prevState => ({
                 selectedRows: this.state.selectedRows.filter(row => {
-                    return row !== id 
+                    return row !== id
                 }),
             }))
             e.target.parentElement.classList.toggle('rows__row--selected')
         }
+
     }
 
     render() {
@@ -44,22 +46,26 @@ class Row extends React.Component {
                 {this.state.allRows.map(row => {
                     return (
                         <div className={'rows__row'} key={row.id} id={row.id}>
-                            <input
-                                className='rows__row--select table__col col1'
-                                type='checkbox'
-                                onClick={(e => 
-                                    this.selectRow(e, row.id)
+                            <TableContext.Consumer>
+                                {(context) => (
+                                    <React.Fragment>
+                                        <input
+                                            className='rows__row--select table__col col1'
+                                            type='checkbox'
+                                            onClick={context.selectRow}
+                                        ></input>
+                                        <span className='table__col col2'><p className={`rows__row--status ${(row.status).toLowerCase()}`}>{row.status}</p></span>
+                                        <p className='rows__row--name table__col col3'>{row.name}</p>
+                                        <p className='rows__row--type table__col col4'>{row.type}</p>
+                                        <p className='rows__row--tags table__col col5'>{row.tags}</p>
+                                        <p className='rows__row--owner table__col col6'>{row.owner}</p>
+                                    </React.Fragment>
                                 )}
-                            ></input>
-
-                            <span className='table__col col2'><p className={`rows__row--status ${(row.status).toLowerCase()}`}>{row.status}</p></span>
-                            <p className='rows__row--name table__col col3'>{row.name}</p>
-                            <p className='rows__row--type table__col col4'>{row.type}</p>
-                            <p className='rows__row--tags table__col col5'>{row.tags}</p>
-                            <p className='rows__row--owner table__col col6'>{row.owner}</p>
+                            </TableContext.Consumer>
                         </div>
                     )
                 })}
+
             </div>
         )
     }
