@@ -255,6 +255,7 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
   overflow-x: hidden; }
   .rows .rows__row {
     all: unset;
+    background-color: white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -277,6 +278,8 @@ h1, h2, h3, h4, h5, p, button, label, li, span {
     font-weight: 600;
     border-radius: 3px;
     color: white; }
+  .rows .rows__row--selected {
+    background-color: #E7F0F8; }
   .rows .alert {
     background-color: #D9534F; }
   .rows .ok {
