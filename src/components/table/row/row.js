@@ -49,11 +49,7 @@ class Row extends React.Component {
                       }}
                     />
                     <span className="table__col col2">
-                      <p
-                        className={`rows__row--status ${row.status.toLowerCase()}`}
-                      >
-                        {row.status}
-                      </p>
+                      <p className={`rows__row--status ${row.status.toLowerCase()}`}>{row.status}</p>
                     </span>
                     <p className="rows__row--name table__col col3">
                       {row.name}

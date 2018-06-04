@@ -1,8 +1,10 @@
 import React from "react";
-import { TableProvider, TableContext } from "../../../../providers/tableProvider";
+import {
+  TableProvider,
+  TableContext
+} from "../../../../providers/tableProvider";
 
 class TableButtons extends React.Component {
-
   Mute() {
     console.log("mute");
   }
@@ -29,11 +31,12 @@ class TableButtons extends React.Component {
                 return (
                   <button
                     key={m}
-                    className={`actions__buttons--button ${
-                      !value.active ? "disabled__button" : null
-                    }`}
-                    disabled={value.active ? true : false}
-                    onClick={this[m]}
+                    className={`
+                        actions__buttons--button 
+                        ${!value.active ? "disabled__button" : null}
+                    `}
+                    disabled={!value.active ? true : false}
+                    onClick={() => this[m]()}
                   >
                     {m}
                   </button>
