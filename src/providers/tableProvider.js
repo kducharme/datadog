@@ -9,12 +9,22 @@ export class TableProvider extends React.Component {
   };
 
   activeButtons(e) {
-    const tableNodes = document.querySelectorAll('.rows');
-    const activeClass = 'rows__row--selected';
-    console.log(tableNodes)
-    this.setState({
-      active: true
-    })
+    const allRows = document.querySelectorAll(".rows")[0].childNodes;
+    const activeClass = "rows__row--selected";
+    console.log("check");
+    for (let i = 0; i < allRows.length; i++) {
+      if (allRows[i].classList.contains(activeClass)) {
+        this.setState({
+          active: true
+        });
+        break;
+      }
+      if (!allRows[i].classList.contains(activeClass)) {
+        this.setState({
+          active: false
+        });
+      }
+    }
   }
 
   allSelectedRows = function(e, id) {
