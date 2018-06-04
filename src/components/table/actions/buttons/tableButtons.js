@@ -8,17 +8,25 @@ class TableButtons extends React.Component {
   Mute() {
     console.log("mute");
   }
+
   Resole() {
     console.log("resolve");
   }
+
   Edit() {
     console.log("edit");
   }
-  Duplicate() {
+
+  Duplicate(row) {
     console.log("duplicate");
   }
-  Delete() {
-    console.log("delete");
+
+  Delete(rows, value) {
+    rows.forEach(row => {
+      fetch(`http://localhost:4000/rows/${row}`, {
+        method: "DELETE"
+      }).then(value.deleteRows(row));
+    })
   }
 
   render() {
@@ -36,7 +44,7 @@ class TableButtons extends React.Component {
                         ${!value.active ? "disabled__button" : null}
                     `}
                     disabled={!value.active ? true : false}
-                    onClick={() => this[m]()}
+                    onClick={() => this[m](value.selectedRows, value)}
                   >
                     {m}
                   </button>

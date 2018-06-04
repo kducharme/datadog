@@ -4,9 +4,30 @@ export const TableContext = React.createContext();
 
 export class TableProvider extends React.Component {
   state = {
+    allRows: [],
     selectedRows: [],
     active: false
   };
+
+  componentDidMount() {
+    fetch("http://localhost:4000/rows")
+    .then(rows => {
+      return rows.json();
+    })
+    .then(rows => {
+      this.setState({
+        allRows: [...rows]
+      });
+    });
+  }
+
+  deleteRows = function(id) {
+    this.setState(prevState => ({
+      allRows: this.state.allRows.filter(row => {
+        return row.id !== id;
+      })
+    }));
+  }
 
   activeButtons(e) {
     const allRows = document.querySelectorAll(".rows")[0].childNodes;
@@ -45,10 +66,12 @@ export class TableProvider extends React.Component {
     return (
       <TableContext.Provider
         value={{
+          allRows: this.state.allRows,
           selectedRows: this.state.selectedRows,
           active: this.state.active,
           activeButtons: this.activeButtons.bind(this),
-          addRows: this.allSelectedRows.bind(this)
+          addRows: this.allSelectedRows.bind(this),
+          deleteRows: this.deleteRows.bind(this)
         }}
       >
         {this.props.children}

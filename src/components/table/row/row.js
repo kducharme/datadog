@@ -2,24 +2,6 @@ import React from "react";
 import { TableProvider, TableContext } from "../../../providers/tableProvider";
 
 class Row extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      allRows: []
-    };
-  }
-
-  componentDidMount() {
-    fetch("http://localhost:4000/rows")
-      .then(rows => {
-        return rows.json();
-      })
-      .then(rows => {
-        this.setState({
-          allRows: [...rows]
-        });
-      });
-  }
 
   selectRow(e, id) {
     if (e.currentTarget.checked) {
@@ -36,7 +18,7 @@ class Row extends React.Component {
         {value => {
           return (
             <div className="rows">
-              {this.state.allRows.map(row => {
+              {value.allRows.map(row => {
                 return (
                   <div className={"rows__row"} key={row.id} id={row.id}>
                     <input
@@ -49,7 +31,11 @@ class Row extends React.Component {
                       }}
                     />
                     <span className="table__col col2">
-                      <p className={`rows__row--status ${row.status.toLowerCase()}`}>{row.status}</p>
+                      <p
+                        className={`rows__row--status ${row.status.toLowerCase()}`}
+                      >
+                        {row.status}
+                      </p>
                     </span>
                     <p className="rows__row--name table__col col3">
                       {row.name}
