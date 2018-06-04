@@ -4,15 +4,24 @@ export const TableContext = React.createContext();
 
 export class TableProvider extends React.Component {
   state = {
-    selectedRows: []
+    selectedRows: [],
+    active: false
   };
+
+  activeButtons(e) {
+    const tableNodes = document.querySelectorAll('.rows');
+    const activeClass = 'rows__row--selected';
+    console.log(tableNodes)
+    this.setState({
+      active: true
+    })
+  }
 
   allSelectedRows = function(e, id) {
     if (e.currentTarget.checked) {
       this.setState(prevState => ({
         selectedRows: [...prevState.selectedRows, id]
       }));
-      console.log(this.state.selectedRows);
     }
     if (!e.currentTarget.checked) {
       this.setState(prevState => ({
@@ -20,7 +29,6 @@ export class TableProvider extends React.Component {
           return row !== id;
         })
       }));
-      console.log(this.state.selectedRows);
     }
   };
 
@@ -28,7 +36,9 @@ export class TableProvider extends React.Component {
     return (
       <TableContext.Provider
         value={{
-          state: this.state.selectedRows,
+          selectedRows: this.state.selectedRows,
+          active: this.state.active,
+          activeButtons: this.activeButtons.bind(this),
           addRows: this.allSelectedRows.bind(this)
         }}
       >

@@ -44,8 +44,8 @@ class Row extends React.Component {
                       type="checkbox"
                       onClick={e => {
                         this.selectRow(e, row.id);
-                        console.log(value)
-                        value.addRows(e, row.id)
+                        value.addRows(e, row.id);
+                        value.activeButtons(e);
                       }}
                     />
                     <span className="table__col col2">
