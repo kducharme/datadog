@@ -1,5 +1,5 @@
 import React from "react";
-import { TableProvider, TableContext } from "../tableProvider";
+import { TableProvider, TableContext } from "../../../providers/tableProvider";
 
 class Row extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class Row extends React.Component {
                       onClick={e => {
                         this.selectRow(e, row.id);
                         console.log(value)
-                        // value.addRows(e, row.id)
+                        value.addRows(e, row.id)
                       }}
                     />
                     <span className="table__col col2">

@@ -2,7 +2,7 @@ import React from "react";
 
 export const TableContext = React.createContext();
 
-class TableProvider extends React.Component {
+export class TableProvider extends React.Component {
   state = {
     selectedRows: []
   };
@@ -12,6 +12,7 @@ class TableProvider extends React.Component {
       this.setState(prevState => ({
         selectedRows: [...prevState.selectedRows, id]
       }));
+      console.log(this.state.selectedRows);
     }
     if (!e.currentTarget.checked) {
       this.setState(prevState => ({
@@ -19,15 +20,15 @@ class TableProvider extends React.Component {
           return row !== id;
         })
       }));
+      console.log(this.state.selectedRows);
     }
-    console.log(this.state.selectedRows);
   };
 
   render() {
     return (
       <TableContext.Provider
         value={{
-          state: this.state.selectedRows.bind(this),
+          state: this.state.selectedRows,
           addRows: this.allSelectedRows.bind(this)
         }}
       >
@@ -36,5 +37,3 @@ class TableProvider extends React.Component {
     );
   }
 }
-
-export default TableProvider;
